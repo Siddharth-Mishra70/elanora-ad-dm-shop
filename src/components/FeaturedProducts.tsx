@@ -7,6 +7,7 @@ interface Product {
   stoneType: string;
   category: string;
   image: string;
+  images?: string[];
   price: number;
 }
 

@@ -1,3 +1,6 @@
+import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
 interface Product {
   id: string;
   code: string;
@@ -5,6 +8,7 @@ interface Product {
   stoneType: string;
   category: string;
   image: string;
+  images?: string[];
   price: number;
 }
 
@@ -15,6 +19,24 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ product, onOrderClick, index }: ProductCardProps) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  const allImages = product.images && product.images.length > 0 
+    ? product.images 
+    : [product.image];
+  
+  const hasMultipleImages = allImages.length > 1;
+
+  const nextImage = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCurrentImageIndex((prev) => (prev + 1) % allImages.length);
+  };
+
+  const prevImage = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCurrentImageIndex((prev) => (prev - 1 + allImages.length) % allImages.length);
+  };
+
   return (
     <article 
       className={`group luxury-card overflow-hidden opacity-0 animate-fade-up`}
@@ -23,13 +45,51 @@ const ProductCard = ({ product, onOrderClick, index }: ProductCardProps) => {
       {/* Product Image */}
       <div className="relative aspect-square overflow-hidden bg-cream">
         <img
-          src={product.image}
+          src={allImages[currentImageIndex]}
           alt={`${product.name} - ${product.stoneType} AD Stone ${product.category}`}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
         
+        {/* Navigation Arrows */}
+        {hasMultipleImages && (
+          <>
+            <button
+              onClick={prevImage}
+              className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-background/80 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-background"
+            >
+              <ChevronLeft className="w-4 h-4 text-foreground" />
+            </button>
+            <button
+              onClick={nextImage}
+              className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-background/80 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-background"
+            >
+              <ChevronRight className="w-4 h-4 text-foreground" />
+            </button>
+          </>
+        )}
+        
+        {/* Image Dots */}
+        {hasMultipleImages && (
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+            {allImages.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setCurrentImageIndex(idx);
+                }}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  idx === currentImageIndex 
+                    ? "bg-primary w-4" 
+                    : "bg-background/60 hover:bg-background/80"
+                }`}
+              />
+            ))}
+          </div>
+        )}
+        
         {/* Quick View Overlay */}
-        <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/10 transition-colors duration-500" />
+        <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/10 transition-colors duration-500 pointer-events-none" />
         
         {/* Category Badge */}
         <div className="absolute top-4 left-4">

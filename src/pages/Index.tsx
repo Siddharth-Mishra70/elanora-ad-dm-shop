@@ -28,6 +28,7 @@ interface Product {
   stoneType: string;
   category: string;
   image: string;
+  images?: string[];
   price: number;
 }
 
@@ -108,25 +109,8 @@ const products: Product[] = [
     stoneType: "Cushion Cut",
     category: "Earrings",
     image: productEarring4,
+    images: [productEarring4, productEarring5, productEarring6],
     price: 499,
-  },
-  {
-    id: "8",
-    code: "EL-E-005",
-    name: "Diamond Halo Studs",
-    stoneType: "Cushion Cut",
-    category: "Earrings",
-    image: productEarring5,
-    price: 549,
-  },
-  {
-    id: "9",
-    code: "EL-E-006",
-    name: "Elegant Square Studs",
-    stoneType: "Princess Cut",
-    category: "Earrings",
-    image: productEarring6,
-    price: 599,
   },
 ];
 
