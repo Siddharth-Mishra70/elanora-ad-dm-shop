@@ -20,6 +20,9 @@ import productEarring3 from "@/assets/product-earring-3.jpg";
 import productEarring4 from "@/assets/product-earring-4.jpg";
 import productEarring5 from "@/assets/product-earring-5.jpg";
 import productEarring6 from "@/assets/product-earring-6.jpg";
+import productHeart1 from "@/assets/product-heart-1.jpg";
+import productHeart2 from "@/assets/product-heart-2.jpg";
+import productHeart3 from "@/assets/product-heart-3.jpg";
 
 interface Product {
   id: string;
@@ -50,6 +53,16 @@ const categories = [
 const products: Product[] = [
   {
     id: "1",
+    code: "EL-E-007",
+    name: "Rose Heart Studs",
+    stoneType: "Heart Cut",
+    category: "Earrings",
+    image: productHeart1,
+    images: [productHeart1, productHeart2, productHeart3],
+    price: 599,
+  },
+  {
+    id: "2",
     code: "EL-R-001",
     name: "Celestial Solitaire",
     stoneType: "Brilliant Cut",
