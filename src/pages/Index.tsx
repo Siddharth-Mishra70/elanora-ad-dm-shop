@@ -23,6 +23,9 @@ import productEarring6 from "@/assets/product-earring-6.jpg";
 import productHeart1 from "@/assets/product-heart-1.jpg";
 import productHeart2 from "@/assets/product-heart-2.jpg";
 import productHeart3 from "@/assets/product-heart-3.jpg";
+import productPetal1 from "@/assets/product-petal-1.jpg";
+import productPetal2 from "@/assets/product-petal-2.jpg";
+import productPetal3 from "@/assets/product-petal-3.jpg";
 
 interface Product {
   id: string;
@@ -63,6 +66,16 @@ const products: Product[] = [
   },
   {
     id: "2",
+    code: "EL-E-008",
+    name: "Pearl Petal Drops",
+    stoneType: "Petal Cut",
+    category: "Earrings",
+    image: productPetal1,
+    images: [productPetal1, productPetal2, productPetal3],
+    price: 699,
+  },
+  {
+    id: "3",
     code: "EL-R-001",
     name: "Celestial Solitaire",
     stoneType: "Brilliant Cut",
