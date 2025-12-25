@@ -18,6 +18,8 @@ import productEarring1 from "@/assets/product-earring-1.jpg";
 import productEarring2 from "@/assets/product-earring-2.jpg";
 import productEarring3 from "@/assets/product-earring-3.jpg";
 import productEarring4 from "@/assets/product-earring-4.jpg";
+import productEarring5 from "@/assets/product-earring-5.jpg";
+import productEarring6 from "@/assets/product-earring-6.jpg";
 
 interface Product {
   id: string;
@@ -107,6 +109,24 @@ const products: Product[] = [
     category: "Earrings",
     image: productEarring4,
     price: 499,
+  },
+  {
+    id: "8",
+    code: "EL-E-005",
+    name: "Diamond Halo Studs",
+    stoneType: "Cushion Cut",
+    category: "Earrings",
+    image: productEarring5,
+    price: 549,
+  },
+  {
+    id: "9",
+    code: "EL-E-006",
+    name: "Elegant Square Studs",
+    stoneType: "Princess Cut",
+    category: "Earrings",
+    image: productEarring6,
+    price: 599,
   },
 ];
 
