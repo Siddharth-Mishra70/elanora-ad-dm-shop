@@ -5,6 +5,7 @@ interface Product {
   stoneType: string;
   category: string;
   image: string;
+  price: number;
 }
 
 interface ProductCardProps {
@@ -46,6 +47,9 @@ const ProductCard = ({ product, onOrderClick, index }: ProductCardProps) => {
           </h3>
           <p className="text-sm text-muted-foreground tracking-wide">
             {product.stoneType} AD Stone
+          </p>
+          <p className="text-lg font-semibold text-primary mt-2">
+            ₹{product.price}
           </p>
         </div>
 
