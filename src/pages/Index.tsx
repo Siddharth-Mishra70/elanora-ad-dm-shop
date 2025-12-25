@@ -17,6 +17,7 @@ import productRing3 from "@/assets/product-ring-3.jpg";
 import productEarring1 from "@/assets/product-earring-1.jpg";
 import productEarring2 from "@/assets/product-earring-2.jpg";
 import productEarring3 from "@/assets/product-earring-3.jpg";
+import productEarring4 from "@/assets/product-earring-4.jpg";
 
 interface Product {
   id: string;
@@ -25,6 +26,7 @@ interface Product {
   stoneType: string;
   category: string;
   image: string;
+  price: number;
 }
 
 const categories = [
@@ -50,6 +52,7 @@ const products: Product[] = [
     stoneType: "Brilliant Cut",
     category: "Rings",
     image: productRing1,
+    price: 599,
   },
   {
     id: "2",
@@ -58,6 +61,7 @@ const products: Product[] = [
     stoneType: "Rose Cut",
     category: "Rings",
     image: productRing2,
+    price: 649,
   },
   {
     id: "3",
@@ -66,6 +70,7 @@ const products: Product[] = [
     stoneType: "Princess Cut",
     category: "Rings",
     image: productRing3,
+    price: 549,
   },
   {
     id: "4",
@@ -74,6 +79,7 @@ const products: Product[] = [
     stoneType: "Teardrop",
     category: "Earrings",
     image: productEarring1,
+    price: 699,
   },
   {
     id: "5",
@@ -82,6 +88,7 @@ const products: Product[] = [
     stoneType: "Round Brilliant",
     category: "Earrings",
     image: productEarring2,
+    price: 449,
   },
   {
     id: "6",
@@ -90,6 +97,16 @@ const products: Product[] = [
     stoneType: "Multi-Cut",
     category: "Earrings",
     image: productEarring3,
+    price: 799,
+  },
+  {
+    id: "7",
+    code: "EL-E-004",
+    name: "Halo Cushion Studs",
+    stoneType: "Cushion Cut",
+    category: "Earrings",
+    image: productEarring4,
+    price: 499,
   },
 ];
 
