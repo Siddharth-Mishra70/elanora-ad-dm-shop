@@ -81,6 +81,7 @@ const products: Product[] = [
     stoneType: "Brilliant Cut",
     category: "Rings",
     image: productRing1,
+    images: [productRing1, productRing2, productRing3],
     price: 599,
   },
   {
