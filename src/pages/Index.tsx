@@ -29,6 +29,8 @@ import productPetal3 from "@/assets/product-petal-3.jpg";
 import productBracelet1 from "@/assets/product-bracelet-1.jpg";
 import productBracelet2 from "@/assets/product-bracelet-2.jpg";
 import productBracelet3 from "@/assets/product-bracelet-3.jpg";
+import productNecklace1 from "@/assets/product-necklace-1.jpg";
+import productNecklace2 from "@/assets/product-necklace-2.jpg";
 
 interface Product {
   id: string;
@@ -103,7 +105,8 @@ const products: Product[] = [
     name: "Eternity Band",
     stoneType: "Princess Cut",
     category: "Rings",
-    image: productRing3,
+    image: productNecklace1,
+    images: [productNecklace1, productNecklace2],
     price: 549,
   },
   {
