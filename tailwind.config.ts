@@ -47,16 +47,30 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
-          dark: "hsl(var(--gold-dark))",
+        // Rose Gold & Pink palette
+        "rose-gold": {
+          DEFAULT: "hsl(var(--rose-gold))",
+          light: "hsl(var(--rose-gold-light))",
+          dark: "hsl(var(--rose-gold-dark))",
         },
+        blush: {
+          DEFAULT: "hsl(var(--blush))",
+          dark: "hsl(var(--blush-dark))",
+        },
+        "dusty-rose": "hsl(var(--dusty-rose))",
         ivory: "hsl(var(--ivory))",
         cream: "hsl(var(--cream))",
+        "warm-brown": "hsl(var(--warm-brown))",
+        "muted-rose": "hsl(var(--muted-rose))",
+        // Legacy gold tokens mapped to rose-gold for compatibility
+        gold: {
+          DEFAULT: "hsl(var(--rose-gold))",
+          light: "hsl(var(--rose-gold-light))",
+          dark: "hsl(var(--rose-gold-dark))",
+        },
         charcoal: {
-          DEFAULT: "hsl(var(--charcoal))",
-          light: "hsl(var(--charcoal-light))",
+          DEFAULT: "hsl(var(--warm-brown))",
+          light: "hsl(var(--muted-rose))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",

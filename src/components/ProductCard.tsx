@@ -39,38 +39,41 @@ const ProductCard = ({ product, onOrderClick, index }: ProductCardProps) => {
 
   return (
     <article 
-      className={`group luxury-card overflow-hidden opacity-0 animate-fade-up`}
+      className={`group premium-card opacity-0 animate-fade-up transition-all duration-500`}
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       {/* Product Image */}
-      <div className="relative aspect-square overflow-hidden bg-cream">
+      <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-blush to-cream">
         <img
           src={allImages[currentImageIndex]}
           alt={`${product.name} - ${product.stoneType} AD Stone ${product.category}`}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
         
+        {/* Soft pink glow on hover */}
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-rose-gold/10 via-transparent to-transparent pointer-events-none" />
+        
         {/* Navigation Arrows */}
         {hasMultipleImages && (
           <>
             <button
               onClick={prevImage}
-              className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-background/80 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-background"
+              className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 bg-background/90 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-primary hover:text-primary-foreground shadow-md"
             >
-              <ChevronLeft className="w-4 h-4 text-foreground" />
+              <ChevronLeft className="w-4 h-4" />
             </button>
             <button
               onClick={nextImage}
-              className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-background/80 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-background"
+              className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 bg-background/90 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-primary hover:text-primary-foreground shadow-md"
             >
-              <ChevronRight className="w-4 h-4 text-foreground" />
+              <ChevronRight className="w-4 h-4" />
             </button>
           </>
         )}
         
         {/* Image Dots */}
         {hasMultipleImages && (
-          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
             {allImages.map((_, idx) => (
               <button
                 key={idx}
@@ -80,20 +83,17 @@ const ProductCard = ({ product, onOrderClick, index }: ProductCardProps) => {
                 }}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
                   idx === currentImageIndex 
-                    ? "bg-primary w-4" 
-                    : "bg-background/60 hover:bg-background/80"
+                    ? "bg-rose-gold w-5 shadow-md" 
+                    : "bg-background/70 hover:bg-background"
                 }`}
               />
             ))}
           </div>
         )}
         
-        {/* Quick View Overlay */}
-        <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/10 transition-colors duration-500 pointer-events-none" />
-        
         {/* Category Badge */}
         <div className="absolute top-4 left-4">
-          <span className="inline-block px-3 py-1 bg-background/90 backdrop-blur-sm text-xs tracking-[0.15em] uppercase text-muted-foreground">
+          <span className="inline-block px-4 py-1.5 bg-background/95 backdrop-blur-sm text-xs tracking-[0.15em] uppercase text-muted-foreground rounded-full shadow-sm border border-border/50">
             {product.category}
           </span>
         </div>
