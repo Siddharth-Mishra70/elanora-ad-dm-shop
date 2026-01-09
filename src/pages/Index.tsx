@@ -31,6 +31,8 @@ import productBracelet2 from "@/assets/product-bracelet-2.jpg";
 import productBracelet3 from "@/assets/product-bracelet-3.jpg";
 import productNecklace1 from "@/assets/product-necklace-1.jpg";
 import productNecklace2 from "@/assets/product-necklace-2.jpg";
+import productHeartNecklace1 from "@/assets/product-heart-necklace-1.jpg";
+import productHeartNecklace2 from "@/assets/product-heart-necklace-2.jpg";
 
 interface Product {
   id: string;
@@ -115,7 +117,8 @@ const products: Product[] = [
     name: "Cascade Drops",
     stoneType: "Teardrop",
     category: "Earrings",
-    image: productEarring1,
+    image: productHeartNecklace1,
+    images: [productHeartNecklace1, productHeartNecklace2],
     price: 699,
   },
   {
