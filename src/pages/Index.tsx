@@ -26,6 +26,9 @@ import productHeart3 from "@/assets/product-heart-3.jpg";
 import productPetal1 from "@/assets/product-petal-1.jpg";
 import productPetal2 from "@/assets/product-petal-2.jpg";
 import productPetal3 from "@/assets/product-petal-3.jpg";
+import productBracelet1 from "@/assets/product-bracelet-1.jpg";
+import productBracelet2 from "@/assets/product-bracelet-2.jpg";
+import productBracelet3 from "@/assets/product-bracelet-3.jpg";
 
 interface Product {
   id: string;
@@ -90,7 +93,8 @@ const products: Product[] = [
     name: "Flora Cluster",
     stoneType: "Rose Cut",
     category: "Rings",
-    image: productRing2,
+    image: productBracelet1,
+    images: [productBracelet1, productBracelet2, productBracelet3],
     price: 649,
   },
   {
