@@ -33,6 +33,7 @@ import productNecklace1 from "@/assets/product-necklace-1.jpg";
 import productNecklace2 from "@/assets/product-necklace-2.jpg";
 import productHeartNecklace1 from "@/assets/product-heart-necklace-1.jpg";
 import productHeartNecklace2 from "@/assets/product-heart-necklace-2.jpg";
+import productDiamondEarring1 from "@/assets/product-diamond-earring-1.jpg";
 
 interface Product {
   id: string;
@@ -127,7 +128,7 @@ const products: Product[] = [
     name: "Classic Studs",
     stoneType: "Round Brilliant",
     category: "Earrings",
-    image: productEarring2,
+    image: productDiamondEarring1,
     price: 449,
   },
   {
