@@ -1,10 +1,10 @@
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 md:py-32 bg-cream">
+    <section id="about" className="py-24 md:py-32 bg-gradient-to-b from-background to-blush">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
           {/* Section Header */}
-          <span className="inline-block text-xs tracking-[0.3em] uppercase text-primary mb-4 opacity-0 animate-fade-up">
+          <span className="inline-block text-xs tracking-[0.3em] uppercase text-rose-gold mb-4 opacity-0 animate-fade-up font-medium">
             Our Story
           </span>
           
@@ -15,7 +15,7 @@ const AboutSection = () => {
           {/* Brand Story */}
           <div className="space-y-6 opacity-0 animate-fade-up stagger-2">
             <p className="text-lg text-muted-foreground leading-relaxed font-light">
-              At <span className="text-primary font-medium">ELANORA</span>, we believe that every woman deserves to wear jewellery that tells her story. Our collection of AD stone jewellery is designed for the modern woman who appreciates timeless elegance with a contemporary touch.
+              At <span className="text-rose-gold font-medium">ELANORA</span>, we believe that every woman deserves to wear jewellery that tells her story. Our collection of AD stone jewellery is designed for the modern woman who appreciates timeless elegance with a contemporary touch.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed font-light">
@@ -32,11 +32,11 @@ const AboutSection = () => {
             ].map((value, index) => (
               <div 
                 key={value.title}
-                className={`p-6 luxury-card opacity-0 animate-fade-up`}
+                className={`p-8 premium-card opacity-0 animate-fade-up bg-background/80 backdrop-blur-sm`}
                 style={{ animationDelay: `${0.3 + index * 0.1}s` }}
               >
-                <h3 className="font-serif text-xl text-foreground mb-2">{value.title}</h3>
-                <p className="text-sm text-muted-foreground">{value.description}</p>
+                <h3 className="font-serif text-xl text-foreground mb-3">{value.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>

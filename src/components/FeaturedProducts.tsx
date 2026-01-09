@@ -27,7 +27,7 @@ const FeaturedProducts = ({ products, onOrderClick, filterCategory }: FeaturedPr
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16 md:mb-20">
-          <span className="inline-block text-xs tracking-[0.3em] uppercase text-primary mb-4">
+          <span className="inline-block text-xs tracking-[0.3em] uppercase text-rose-gold mb-4 font-medium">
             {filterCategory ? `${filterCategory} Collection` : "Featured Collection"}
           </span>
           <h2 className="luxury-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground mb-4">
