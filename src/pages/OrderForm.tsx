@@ -11,11 +11,17 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { ArrowLeft, Sparkles, Heart } from "lucide-react";
+import { ArrowLeft, Sparkles, Heart, Loader2 } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+
+// Replace this with your Google Apps Script Web App URL after deployment
+const GOOGLE_SCRIPT_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL";
 
 const OrderForm = () => {
   const navigate = useNavigate();
+  const { toast } = useToast();
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
     mobileNumber: "",
@@ -42,11 +48,65 @@ const OrderForm = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const validateForm = () => {
+    const requiredFields = ["fullName", "mobileNumber", "productName", "city"];
+    for (const field of requiredFields) {
+      if (!formData[field as keyof typeof formData]) {
+        toast({
+          title: "Missing Required Field",
+          description: `Please fill in the ${field.replace(/([A-Z])/g, ' $1').toLowerCase()} field.`,
+          variant: "destructive",
+        });
+        return false;
+      }
+    }
+    return true;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the data to your backend
-    console.log("Order submitted:", formData);
-    setIsSubmitted(true);
+    
+    if (!validateForm()) return;
+    
+    setIsSubmitting(true);
+
+    // Prepare data for Google Sheets
+    const orderData = {
+      customerName: formData.fullName,
+      phoneNumber: formData.mobileNumber,
+      email: formData.email,
+      productKey: formData.productName.split(" ").pop() || formData.productName, // Extract product code if present
+      productName: formData.productName,
+      quantity: formData.quantity,
+      fullAddress: `${formData.deliveryAddress}, ${formData.state} - ${formData.pincode}`,
+      city: formData.city,
+      paymentMethod: formData.paymentMethod,
+      specialInstructions: formData.specialInstructions,
+    };
+
+    try {
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors", // Required for Google Apps Script
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(orderData),
+      });
+
+      // With no-cors mode, we can't read the response, but the request will go through
+      console.log("Order submitted to Google Sheets:", orderData);
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error("Error submitting order:", error);
+      toast({
+        title: "Submission Error",
+        description: "There was an error submitting your order. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
@@ -350,9 +410,19 @@ const OrderForm = () => {
             <div className="pt-6">
               <Button
                 type="submit"
-                className="w-full gold-button rounded-full py-7 text-lg font-medium tracking-wide"
+                disabled={isSubmitting}
+                className="w-full gold-button rounded-full py-7 text-lg font-medium tracking-wide disabled:opacity-70"
               >
-                Place My Order <Sparkles className="w-5 h-5 ml-2" />
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                    Processing...
+                  </>
+                ) : (
+                  <>
+                    Place My Order <Sparkles className="w-5 h-5 ml-2" />
+                  </>
+                )}
               </Button>
               <p className="text-center text-sm text-warm-brown/50 mt-4">
                 We respect your privacy. Your details are safe with us.
