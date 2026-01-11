@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import OrderModal from "@/components/OrderModal";
 
 // Import images
-import heroImage from "@/assets/hero-jewelry.jpg";
+import heroImage from "@/assets/hero-luxury-bg.jpg";
 import categoryRings from "@/assets/category-rings.jpg";
 import categoryEarrings from "@/assets/category-earrings.jpg";
 import productRing1 from "@/assets/product-ring-1.jpg";
