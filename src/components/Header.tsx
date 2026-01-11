@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Instagram, Menu, X } from "lucide-react";
 
 const Header = () => {
@@ -42,6 +43,12 @@ const Header = () => {
             >
               About
             </button>
+            <Link 
+              to="/order"
+              className="text-sm tracking-[0.1em] uppercase bg-primary/10 text-primary px-4 py-2 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+            >
+              Order Now
+            </Link>
           </nav>
 
           {/* Right Side */}
@@ -91,6 +98,12 @@ const Header = () => {
               >
                 About
               </button>
+              <Link 
+                to="/order"
+                className="text-sm tracking-[0.1em] uppercase bg-primary/10 text-primary px-4 py-2 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+              >
+                Order Now
+              </Link>
             </div>
           </nav>
         )}
