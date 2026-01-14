@@ -113,10 +113,10 @@ const products: Product[] = [
   },
   {
     id: "3",
-    code: "EL-R-003",
+    code: "EL-P-001",
     name: "Eternity Band",
     stoneType: "Princess Cut",
-    category: "Rings",
+    category: "Pendant",
     image: productNecklace1,
     images: [productNecklace1, productNecklace2],
     price: 549,
