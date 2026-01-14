@@ -37,6 +37,9 @@ import productDiamondEarring1 from "@/assets/product-diamond-earring-1.jpg";
 import productButterfly1 from "@/assets/product-butterfly-1.png";
 import productButterfly2 from "@/assets/product-butterfly-2.png";
 import productButterfly3 from "@/assets/product-butterfly-3.png";
+import productCrownBracelet1 from "@/assets/product-crown-bracelet-1.png";
+import productCrownBracelet2 from "@/assets/product-crown-bracelet-2.png";
+import productCrownBracelet3 from "@/assets/product-crown-bracelet-3.png";
 
 interface Product {
   id: string;
@@ -98,11 +101,11 @@ const products: Product[] = [
   {
     id: "2",
     code: "EL-R-002",
-    name: "Flora Cluster",
+    name: "Crown Elegance",
     stoneType: "Rose Cut",
     category: "Rings",
-    image: productBracelet1,
-    images: [productBracelet1, productBracelet2, productBracelet3],
+    image: productCrownBracelet1,
+    images: [productCrownBracelet1, productCrownBracelet2, productCrownBracelet3],
     price: 649,
   },
   {
