@@ -4,25 +4,25 @@
 
 @layer base {
   :root {
-    /* Soft Luxury Pink Theme */
-    --background: 350 30% 97%;
+    /* Soft Luxury Blush Pink Theme */
+    --background: 20 30% 98%;
     --foreground: 20 15% 25%;
 
-    --card: 350 25% 96%;
+    --card: 20 35% 97%;
     --card-foreground: 20 15% 25%;
 
-    --popover: 350 30% 98%;
+    --popover: 20 40% 99%;
     --popover-foreground: 20 15% 25%;
 
     /* Rose Gold accent as primary */
     --primary: 15 45% 65%;
-    --primary-foreground: 350 30% 98%;
+    --primary-foreground: 20 30% 98%;
 
     /* Soft blush for secondary */
-    --secondary: 350 25% 93%;
+    --secondary: 350 30% 95%;
     --secondary-foreground: 20 12% 30%;
 
-    --muted: 350 20% 94%;
+    --muted: 20 25% 95%;
     --muted-foreground: 20 10% 45%;
 
     /* Champagne gold accent */
@@ -32,8 +32,8 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 350 20% 88%;
-    --input: 350 20% 88%;
+    --border: 350 25% 90%;
+    --input: 350 25% 90%;
     --ring: 15 45% 65%;
 
     --radius: 0.75rem;
@@ -42,32 +42,33 @@
     --rose-gold: 15 45% 65%;
     --rose-gold-light: 15 50% 75%;
     --rose-gold-dark: 15 50% 55%;
-    --blush: 350 35% 92%;
-    --blush-dark: 350 30% 85%;
-    --dusty-rose: 350 25% 75%;
-    --ivory: 40 40% 97%;
-    --cream: 35 35% 94%;
+    --blush: 350 40% 94%;
+    --blush-dark: 350 35% 88%;
+    --dusty-rose: 350 30% 85%;
+    --ivory: 40 50% 98%;
+    --cream: 35 45% 96%;
     --warm-brown: 20 15% 25%;
-    --muted-rose: 350 20% 60%;
+    --muted-rose: 350 25% 70%;
 
     /* Shadows with pink tint */
-    --shadow-soft: 0 4px 20px -4px hsl(350 30% 50% / 0.12);
-    --shadow-luxury: 0 8px 40px -8px hsl(15 40% 50% / 0.18);
-    --shadow-glow: 0 0 30px hsl(15 45% 65% / 0.25);
-    --shadow-pink: 0 4px 25px -4px hsl(350 40% 70% / 0.3);
+    --shadow-soft: 0 4px 20px -4px hsl(350 35% 60% / 0.08);
+    --shadow-luxury: 0 8px 40px -8px hsl(15 40% 50% / 0.12);
+    --shadow-glow: 0 0 30px hsl(15 45% 65% / 0.2);
+    --shadow-pink: 0 4px 25px -4px hsl(350 45% 75% / 0.25);
 
     /* Gradients */
     --gradient-rose: linear-gradient(135deg, hsl(15 50% 75%), hsl(15 45% 60%));
-    --gradient-blush: linear-gradient(180deg, hsl(350 30% 97%), hsl(350 25% 92%));
-    --gradient-hero: linear-gradient(135deg, hsl(350 35% 95%), hsl(40 40% 97%), hsl(350 30% 93%));
+    --gradient-blush: linear-gradient(180deg, hsl(350 35% 96%), hsl(20 40% 98%));
+    --gradient-hero: radial-gradient(ellipse at center, hsl(40 50% 98%) 0%, hsl(350 35% 95%) 50%, hsl(350 40% 92%) 100%);
+    --gradient-page: radial-gradient(ellipse 120% 80% at 50% 20%, hsl(40 50% 98%) 0%, hsl(350 38% 96%) 40%, hsl(350 42% 93%) 100%);
 
-    --sidebar-background: 350 25% 96%;
+    --sidebar-background: 350 30% 97%;
     --sidebar-foreground: 20 15% 30%;
     --sidebar-primary: 15 45% 65%;
     --sidebar-primary-foreground: 350 30% 98%;
-    --sidebar-accent: 350 25% 93%;
+    --sidebar-accent: 350 30% 95%;
     --sidebar-accent-foreground: 20 12% 30%;
-    --sidebar-border: 350 20% 88%;
+    --sidebar-border: 350 25% 90%;
     --sidebar-ring: 15 45% 65%;
   }
 
@@ -128,8 +129,50 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply text-foreground antialiased;
     font-family: 'Montserrat', sans-serif;
+    background: var(--gradient-page);
+    min-height: 100vh;
+    position: relative;
+  }
+
+  /* Subtle heart pattern overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image: 
+      radial-gradient(ellipse 200px 200px at 10% 20%, hsl(350 45% 92% / 0.3) 0%, transparent 50%),
+      radial-gradient(ellipse 180px 180px at 90% 80%, hsl(350 40% 90% / 0.25) 0%, transparent 50%),
+      radial-gradient(ellipse 150px 150px at 80% 10%, hsl(350 35% 93% / 0.2) 0%, transparent 50%),
+      radial-gradient(ellipse 200px 200px at 20% 90%, hsl(350 40% 91% / 0.25) 0%, transparent 50%);
+  }
+
+  /* Soft abstract shapes layer */
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+    background-image:
+      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 15 C25 10, 18 10, 15 18 C12 26, 20 35, 30 45 C40 35, 48 26, 45 18 C42 10, 35 10, 30 15' fill='none' stroke='%23f5e1e1' stroke-width='0.5' opacity='0.3'/%3E%3C/svg%3E");
+    background-size: 120px 120px;
+    background-position: center;
+  }
+
+  #root {
+    position: relative;
+    z-index: 1;
   }
 
   h1, h2, h3, h4, h5, h6 {
