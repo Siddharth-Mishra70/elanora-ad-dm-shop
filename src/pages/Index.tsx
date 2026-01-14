@@ -34,6 +34,9 @@ import productNecklace2 from "@/assets/product-necklace-2.jpg";
 import productHeartNecklace1 from "@/assets/product-heart-necklace-1.jpg";
 import productHeartNecklace2 from "@/assets/product-heart-necklace-2.jpg";
 import productDiamondEarring1 from "@/assets/product-diamond-earring-1.jpg";
+import productButterfly1 from "@/assets/product-butterfly-1.png";
+import productButterfly2 from "@/assets/product-butterfly-2.png";
+import productButterfly3 from "@/assets/product-butterfly-3.png";
 
 interface Product {
   id: string;
@@ -134,10 +137,11 @@ const products: Product[] = [
   {
     id: "6",
     code: "EL-E-003",
-    name: "Royal Chandelier",
+    name: "Butterfly Elegance",
     stoneType: "Multi-Cut",
     category: "Earrings",
-    image: productEarring3,
+    image: productButterfly1,
+    images: [productButterfly1, productButterfly2, productButterfly3],
     price: 799,
   },
   {
