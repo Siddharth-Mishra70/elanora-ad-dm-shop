@@ -40,6 +40,9 @@ import productButterfly3 from "@/assets/product-butterfly-3.png";
 import productCrownBracelet1 from "@/assets/product-crown-bracelet-1.png";
 import productCrownBracelet2 from "@/assets/product-crown-bracelet-2.png";
 import productCrownBracelet3 from "@/assets/product-crown-bracelet-3.png";
+import productHeartBracelet1 from "@/assets/product-heart-bracelet-1.jpg";
+import productHeartBracelet2 from "@/assets/product-heart-bracelet-2.jpg";
+import productHeartBracelet3 from "@/assets/product-heart-bracelet-3.jpg";
 
 interface Product {
   id: string;
@@ -156,6 +159,16 @@ const products: Product[] = [
     image: productEarring4,
     images: [productEarring4, productEarring5, productEarring6],
     price: 499,
+  },
+  {
+    id: "8",
+    code: "EL-E-005",
+    name: "Heart Link Bracelet",
+    stoneType: "Heart Cut",
+    category: "Bracelets",
+    image: productHeartBracelet1,
+    images: [productHeartBracelet1, productHeartBracelet2, productHeartBracelet3],
+    price: 899,
   },
 ];
 
