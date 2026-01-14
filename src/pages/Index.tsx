@@ -103,10 +103,10 @@ const products: Product[] = [
   },
   {
     id: "2",
-    code: "EL-R-002",
+    code: "EL-B-001",
     name: "Crown Elegance",
     stoneType: "Rose Cut",
-    category: "Rings",
+    category: "Bracelets",
     image: productCrownBracelet1,
     images: [productCrownBracelet1, productCrownBracelet2, productCrownBracelet3],
     price: 649,
