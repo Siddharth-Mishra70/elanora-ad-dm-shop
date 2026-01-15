@@ -22,14 +22,14 @@ const Footer = () => {
 
           {/* Instagram Link */}
           <a
-            href="https://instagram.com/elanora.jewellery"
+            href="https://www.instagram.com/elanora.world?igsh=MWRqdHgzOXBkdGlqMA=="
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 text-muted-rose hover:text-rose-gold transition-colors duration-300 mb-12"
             aria-label="Follow ELANORA on Instagram"
           >
             <Instagram className="w-5 h-5" />
-            <span className="text-sm tracking-[0.1em]">@elanora.jewellery</span>
+            <span className="text-sm tracking-[0.1em]">@elanora.world</span>
           </a>
 
           {/* Copyright */}
