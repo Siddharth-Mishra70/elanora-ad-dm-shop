@@ -1,3 +1,5 @@
+import { Mail } from "lucide-react";
+
 const AboutSection = () => {
   return (
     <section id="about" className="py-24 md:py-32 bg-gradient-to-b from-background to-blush">
@@ -21,6 +23,17 @@ const AboutSection = () => {
             <p className="text-lg text-muted-foreground leading-relaxed font-light">
               Each piece in our collection is meticulously handcrafted by skilled artisans, using only the finest American Diamond stones. From delicate everyday rings to statement earrings, our designs seamlessly blend traditional craftsmanship with modern aesthetics.
             </p>
+          </div>
+
+          {/* Contact Email */}
+          <div className="mt-10 opacity-0 animate-fade-up stagger-3">
+            <a
+              href="mailto:Pelanora@gmail.com"
+              className="inline-flex items-center gap-3 text-rose-gold hover:text-primary transition-colors duration-300 group"
+            >
+              <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              <span className="text-lg tracking-wide">Pelanora@gmail.com</span>
+            </a>
           </div>
 
           {/* Values */}
