@@ -43,6 +43,9 @@ import productCrownBracelet3 from "@/assets/product-crown-bracelet-3.png";
 import productHeartBracelet1 from "@/assets/product-heart-bracelet-1.jpg";
 import productHeartBracelet2 from "@/assets/product-heart-bracelet-2.jpg";
 import productHeartBracelet3 from "@/assets/product-heart-bracelet-3.jpg";
+import productCherryRing1 from "@/assets/product-cherry-ring-1.png";
+import productCherryRing2 from "@/assets/product-cherry-ring-2.png";
+import productCherryRing3 from "@/assets/product-cherry-ring-3.png";
 
 interface Product {
   id: string;
@@ -169,6 +172,16 @@ const products: Product[] = [
     image: productHeartBracelet1,
     images: [productHeartBracelet1, productHeartBracelet2, productHeartBracelet3],
     price: 899,
+  },
+  {
+    id: "9",
+    code: "EL-R-002",
+    name: "Cherry Blossom Ring",
+    stoneType: "Wave Cut",
+    category: "Rings",
+    image: productCherryRing1,
+    images: [productCherryRing1, productCherryRing2, productCherryRing3],
+    price: 749,
   },
 ];
 
