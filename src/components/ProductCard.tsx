@@ -7,7 +7,7 @@ interface Product {
   name: string;
   stoneType: string;
   category: string;
-  image: string;
+  image?: string;
   images?: string[];
   price: number;
 }
@@ -21,10 +21,11 @@ interface ProductCardProps {
 const ProductCard = ({ product, onOrderClick, index }: ProductCardProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
-  const allImages = product.images && product.images.length > 0 
-    ? product.images 
-    : [product.image];
-  
+  const FALLBACK_IMAGE = "/placeholder.svg";
+
+  const allImages = (product.images ?? []).filter(Boolean);
+  if (allImages.length === 0) allImages.push(product.image || FALLBACK_IMAGE);
+
   const hasMultipleImages = allImages.length > 1;
 
   const nextImage = (e: React.MouseEvent) => {
@@ -47,6 +48,9 @@ const ProductCard = ({ product, onOrderClick, index }: ProductCardProps) => {
         <img
           src={allImages[currentImageIndex]}
           alt={`${product.name} - ${product.stoneType} AD Stone ${product.category}`}
+          onError={(e) => {
+            e.currentTarget.src = "/placeholder.svg";
+          }}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
         
