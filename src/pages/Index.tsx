@@ -55,6 +55,9 @@ import productHeartRing3 from "@/assets/product-heart-ring-3.png";
 import productBowRing1 from "@/assets/product-bow-ring-1.jpeg";
 import productBowRing2 from "@/assets/product-bow-ring-2.jpeg";
 import productBowRing3 from "@/assets/product-bow-ring-3.jpeg";
+import productButterflyPendant1 from "@/assets/product-butterfly-pendant-1.jpeg";
+import productButterflyPendant2 from "@/assets/product-butterfly-pendant-2.jpeg";
+import productButterflyPendant3 from "@/assets/product-butterfly-pendant-3.jpeg";
 
 
 interface Product {
@@ -222,6 +225,16 @@ const products: Product[] = [
     image: productBowRing1,
     images: [productBowRing1, productBowRing2, productBowRing3],
     price: 699,
+  },
+  {
+    id: "13",
+    code: "EL-N-003",
+    name: "Butterfly Flower Pendant",
+    stoneType: "Marquise Cut",
+    category: "Necklaces",
+    image: productButterflyPendant1,
+    images: [productButterflyPendant1, productButterflyPendant2, productButterflyPendant3],
+    price: 899,
   },
 ];
 
