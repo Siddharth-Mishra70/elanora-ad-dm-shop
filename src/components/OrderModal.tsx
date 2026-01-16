@@ -13,7 +13,7 @@ interface Product {
   name: string;
   stoneType: string;
   category: string;
-  image: string;
+  image?: string;
 }
 
 interface OrderModalProps {
@@ -55,8 +55,11 @@ const OrderModal = ({ product, isOpen, onClose }: OrderModalProps) => {
         {/* Product Preview */}
         <div className="aspect-square relative overflow-hidden bg-cream">
           <img
-            src={product.image}
+            src={product.image || "/placeholder.svg"}
             alt={product.name}
+            onError={(e) => {
+              e.currentTarget.src = "/placeholder.svg";
+            }}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />

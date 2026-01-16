@@ -52,6 +52,10 @@ import productMomRing3 from "@/assets/product-mom-ring-3.png";
 import productHeartRing1 from "@/assets/product-heart-ring-1.png";
 import productHeartRing2 from "@/assets/product-heart-ring-2.png";
 import productHeartRing3 from "@/assets/product-heart-ring-3.png";
+import productBowRing1 from "@/assets/product-bow-ring-1.jpeg";
+import productBowRing2 from "@/assets/product-bow-ring-2.jpeg";
+import productBowRing3 from "@/assets/product-bow-ring-3.jpeg";
+
 
 interface Product {
   id: string;
@@ -59,7 +63,7 @@ interface Product {
   name: string;
   stoneType: string;
   category: string;
-  image: string;
+  image?: string;
   images?: string[];
   price: number;
 }
@@ -207,6 +211,16 @@ const products: Product[] = [
     category: "Rings",
     image: productHeartRing1,
     images: [productHeartRing1, productHeartRing2, productHeartRing3],
+    price: 699,
+  },
+  {
+    id: "12",
+    code: "EL-R-005",
+    name: "Bow Sparkle Ring",
+    stoneType: "Bow Cut",
+    category: "Rings",
+    image: productBowRing1,
+    images: [productBowRing1, productBowRing2, productBowRing3],
     price: 699,
   },
 ];
