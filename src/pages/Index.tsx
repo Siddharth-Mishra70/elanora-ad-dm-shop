@@ -46,6 +46,9 @@ import productHeartBracelet3 from "@/assets/product-heart-bracelet-3.jpg";
 import productCherryRing1 from "@/assets/product-cherry-ring-1.png";
 import productCherryRing2 from "@/assets/product-cherry-ring-2.png";
 import productCherryRing3 from "@/assets/product-cherry-ring-3.png";
+import productMomRing1 from "@/assets/product-mom-ring-1.png";
+import productMomRing2 from "@/assets/product-mom-ring-2.png";
+import productMomRing3 from "@/assets/product-mom-ring-3.png";
 
 interface Product {
   id: string;
@@ -182,6 +185,16 @@ const products: Product[] = [
     image: productCherryRing1,
     images: [productCherryRing1, productCherryRing2, productCherryRing3],
     price: 749,
+  },
+  {
+    id: "10",
+    code: "EL-R-003",
+    name: "Mom Love Ring",
+    stoneType: "Diamond Cut",
+    category: "Rings",
+    image: productMomRing1,
+    images: [productMomRing1, productMomRing2, productMomRing3],
+    price: 849,
   },
 ];
 
