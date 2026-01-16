@@ -49,6 +49,9 @@ import productCherryRing3 from "@/assets/product-cherry-ring-3.png";
 import productMomRing1 from "@/assets/product-mom-ring-1.png";
 import productMomRing2 from "@/assets/product-mom-ring-2.png";
 import productMomRing3 from "@/assets/product-mom-ring-3.png";
+import productHeartRing1 from "@/assets/product-heart-ring-1.png";
+import productHeartRing2 from "@/assets/product-heart-ring-2.png";
+import productHeartRing3 from "@/assets/product-heart-ring-3.png";
 
 interface Product {
   id: string;
@@ -195,6 +198,16 @@ const products: Product[] = [
     image: productMomRing1,
     images: [productMomRing1, productMomRing2, productMomRing3],
     price: 849,
+  },
+  {
+    id: "11",
+    code: "EL-R-004",
+    name: "Heart Solitaire Ring",
+    stoneType: "Heart Cut",
+    category: "Rings",
+    image: productHeartRing1,
+    images: [productHeartRing1, productHeartRing2, productHeartRing3],
+    price: 699,
   },
 ];
 
