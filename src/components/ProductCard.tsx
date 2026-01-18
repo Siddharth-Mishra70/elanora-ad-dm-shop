@@ -110,7 +110,7 @@ const ProductCard = ({ product, onOrderClick, index }: ProductCardProps) => {
             {product.name}
           </h3>
           <p className="text-sm text-muted-foreground tracking-wide">
-            {product.stoneType} AD Stone
+            {product.stoneType}
           </p>
           <p className="text-lg font-semibold text-primary mt-2">
             ₹{product.price}
