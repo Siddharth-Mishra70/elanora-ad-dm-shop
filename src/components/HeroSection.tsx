@@ -35,7 +35,7 @@ const HeroSection = ({ heroImage }: HeroSectionProps) => {
         </div>
         
         <h1 className="opacity-0 animate-fade-up stagger-2 luxury-heading hero-title text-5xl md:text-7xl lg:text-8xl font-light mb-6 md:mb-8">
-          <span className="rose-gold-gradient-text">ELANORA</span>
+          <span style={{ color: '#652E2F' }}>ELANORA</span>
         </h1>
         
         <p className="opacity-0 animate-fade-up stagger-3 font-serif text-xl md:text-2xl lg:text-3xl text-warm-brown/80 italic mb-8 md:mb-12 font-light">
