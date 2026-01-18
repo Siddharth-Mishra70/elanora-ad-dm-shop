@@ -95,7 +95,7 @@ const products: Product[] = [
     category: "Earrings",
     image: productHeart1,
     images: [productHeart1, productHeart2, productHeart3],
-    price: 599,
+    price: 499,
   },
   {
     id: "2",
@@ -105,7 +105,7 @@ const products: Product[] = [
     category: "Earrings",
     image: productPetal1,
     images: [productPetal1, productPetal2, productPetal3],
-    price: 699,
+    price: 299,
   },
   {
     id: "3",
@@ -115,7 +115,7 @@ const products: Product[] = [
     category: "Rings",
     image: productRing1,
     images: [productRing1, productRing2, productRing3],
-    price: 599,
+    price: 499,
   },
   {
     id: "2",
@@ -135,7 +135,7 @@ const products: Product[] = [
     category: "Pendant",
     image: productNecklace1,
     images: [productNecklace1, productNecklace2],
-    price: 549,
+    price: 499,
   },
   {
     id: "4",
@@ -145,7 +145,7 @@ const products: Product[] = [
     category: "Earrings",
     image: productHeartNecklace1,
     images: [productHeartNecklace1, productHeartNecklace2],
-    price: 699,
+    price: 499,
   },
   {
     id: "5",
@@ -154,7 +154,7 @@ const products: Product[] = [
     stoneType: "Round Brilliant",
     category: "Earrings",
     image: productDiamondEarring1,
-    price: 449,
+    price: 299,
   },
   {
     id: "6",
@@ -174,7 +174,7 @@ const products: Product[] = [
     category: "Earrings",
     image: productEarring4,
     images: [productEarring4, productEarring5, productEarring6],
-    price: 499,
+    price: 599,
   },
   {
     id: "8",
@@ -184,7 +184,7 @@ const products: Product[] = [
     category: "Bracelets",
     image: productHeartBracelet1,
     images: [productHeartBracelet1, productHeartBracelet2, productHeartBracelet3],
-    price: 899,
+    price: 999,
   },
   {
     id: "9",
@@ -194,7 +194,7 @@ const products: Product[] = [
     category: "Rings",
     image: productCherryRing1,
     images: [productCherryRing1, productCherryRing2, productCherryRing3],
-    price: 749,
+    price: 599,
   },
   {
     id: "10",
@@ -204,7 +204,7 @@ const products: Product[] = [
     category: "Rings",
     image: productMomRing1,
     images: [productMomRing1, productMomRing2, productMomRing3],
-    price: 849,
+    price: 399,
   },
   {
     id: "11",
@@ -214,7 +214,7 @@ const products: Product[] = [
     category: "Rings",
     image: productHeartRing1,
     images: [productHeartRing1, productHeartRing2, productHeartRing3],
-    price: 699,
+    price: 499,
   },
   {
     id: "12",
@@ -224,7 +224,7 @@ const products: Product[] = [
     category: "Rings",
     image: productBowRing1,
     images: [productBowRing1, productBowRing2, productBowRing3],
-    price: 699,
+    price: 499,
   },
   {
     id: "13",
@@ -234,7 +234,7 @@ const products: Product[] = [
     category: "Necklaces",
     image: productButterflyPendant1,
     images: [productButterflyPendant1, productButterflyPendant2, productButterflyPendant3],
-    price: 899,
+    price: 799,
   },
 ];
 
