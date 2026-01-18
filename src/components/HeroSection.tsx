@@ -29,8 +29,8 @@ const HeroSection = ({ heroImage }: HeroSectionProps) => {
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <div className="opacity-0 animate-fade-up stagger-1">
-          <span className="inline-block text-xs md:text-sm tracking-[0.3em] uppercase text-rose-gold mb-4 md:mb-6 font-medium">
-            Luxury AD Stone Jewellery
+          <span className="inline-block text-xs md:text-sm tracking-[0.3em] uppercase mb-4 md:mb-6 font-medium" style={{ color: '#000000' }}>
+            Feminine Premium & Gift-oriented
           </span>
         </div>
         
@@ -38,8 +38,9 @@ const HeroSection = ({ heroImage }: HeroSectionProps) => {
           <span style={{ color: '#652E2F' }}>ELANORA</span>
         </h1>
         
-        <p className="opacity-0 animate-fade-up stagger-3 font-serif text-xl md:text-2xl lg:text-3xl text-warm-brown/80 italic mb-8 md:mb-12 font-light">
-          Timeless AD Stone Jewellery for Modern Elegance
+        <p className="opacity-0 animate-fade-up stagger-3 font-serif text-xl md:text-2xl lg:text-3xl italic mb-8 md:mb-12 font-light text-center" style={{ color: '#000000' }}>
+          Timeless pieces for moments that matter.<br />
+          Everyday luxury and unforgettable moments.
         </p>
         
         <div className="opacity-0 animate-fade-up stagger-4">
